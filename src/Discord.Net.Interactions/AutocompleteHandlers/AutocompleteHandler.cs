@@ -1,5 +1,3 @@
-using Discord.Rest;
-using Discord.WebSocket;
 using System;
 using System.Reflection;
 using System.Runtime.ExceptionServices;
@@ -65,7 +63,7 @@ namespace Discord.Interactions
                     {
                         var payload = strTask.Result;
 
-                        if (context is IRestInteractionContext {InteractionResponseCallback: not null} restContext)
+                        if (context is IRestInteractionContext { InteractionResponseCallback: not null } restContext)
                             await restContext.InteractionResponseCallback.Invoke(payload).ConfigureAwait(false);
                         else
                             await InteractionService._restResponseCallback(context, payload).ConfigureAwait(false);

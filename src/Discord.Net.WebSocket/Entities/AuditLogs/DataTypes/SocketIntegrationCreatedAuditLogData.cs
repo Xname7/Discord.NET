@@ -19,7 +19,7 @@ public class SocketIntegrationCreatedAuditLogData : ISocketAuditLogData
         var changes = entry.Changes;
 
         var (_, data) = AuditLogHelper.CreateAuditLogEntityInfo<IntegrationInfoAuditLogModel>(changes, discord);
-        
+
         return new(new SocketIntegrationInfo(data));
     }
 

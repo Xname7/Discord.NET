@@ -36,7 +36,7 @@ public class SocketStageInstanceUpdatedAuditLogData : ISocketAuditLogData
 
         var topic = entry.Changes.FirstOrDefault(x => x.ChangedProperty == "topic");
         var privacy = entry.Changes.FirstOrDefault(x => x.ChangedProperty == "privacy");
-        
+
         var oldTopic = topic?.OldValue.ToObject<string>();
         var newTopic = topic?.NewValue.ToObject<string>();
         var oldPrivacy = privacy?.OldValue.ToObject<StagePrivacyLevel>();

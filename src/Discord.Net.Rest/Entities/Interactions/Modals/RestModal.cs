@@ -1,11 +1,9 @@
 using Discord.Net.Rest;
-using Discord.Rest;
 
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 
 using DataModel = Discord.API.ModalInteractionData;
@@ -157,7 +155,7 @@ namespace Discord.Rest
                 AllowedMentions = allowedMentions?.ToModel() ?? Optional<API.AllowedMentions>.Unspecified,
                 IsTTS = isTTS,
                 Embeds = embeds.Select(x => x.ToModel()).ToArray(),
-                Components = component?.Components.Select(x => new API.ActionRowComponent(x)).ToArray() ??Optional<API.ActionRowComponent[]>.Unspecified,
+                Components = component?.Components.Select(x => new API.ActionRowComponent(x)).ToArray() ?? Optional<API.ActionRowComponent[]>.Unspecified,
                 Poll = poll?.ToModel() ?? Optional<API.Rest.CreatePollParams>.Unspecified
             };
 

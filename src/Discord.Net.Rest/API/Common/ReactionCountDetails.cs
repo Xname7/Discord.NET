@@ -5,8 +5,8 @@ namespace Discord.API;
 internal class ReactionCountDetails
 {
     [JsonProperty("normal")]
-    public int NormalCount { get; set;}
+    public int NormalCount { get; set; }
 
     [JsonProperty("burst")]
-    public int BurstCount { get; set;}
+    public int BurstCount { get; set; }
 }

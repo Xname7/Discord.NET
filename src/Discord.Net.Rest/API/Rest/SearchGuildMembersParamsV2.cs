@@ -72,7 +72,7 @@ internal class SafetySignalsProperties
     public Optional<bool> UnusualAccountActivity { get; set; }
 
     [JsonProperty("automod_quarantined_username")]
-    public Optional<bool> AutomodQuarantinedUsername  { get; set; }
+    public Optional<bool> AutomodQuarantinedUsername { get; set; }
 }
 
 internal class SafetySignalProperties

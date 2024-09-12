@@ -47,7 +47,7 @@ namespace Discord.Rest
         }
         internal override void Update(Model model)
         {
-            if(model.Recipients.IsSpecified)
+            if (model.Recipients.IsSpecified)
                 Recipient?.Update(model.Recipients.Value[0]);
         }
 

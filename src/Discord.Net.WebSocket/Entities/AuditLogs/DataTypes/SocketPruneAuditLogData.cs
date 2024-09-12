@@ -12,7 +12,7 @@ public class SocketPruneAuditLogData : ISocketAuditLogData
         PruneDays = pruneDays;
         MembersRemoved = membersRemoved;
     }
-            
+
     internal static SocketPruneAuditLogData Create(DiscordSocketClient discord, EntryModel entry)
     {
         return new SocketPruneAuditLogData(entry.Options.PruneDeleteMemberDays!.Value, entry.Options.PruneMembersRemoved!.Value);

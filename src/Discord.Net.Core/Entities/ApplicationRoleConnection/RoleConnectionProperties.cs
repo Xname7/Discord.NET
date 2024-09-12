@@ -120,7 +120,7 @@ public class RoleConnectionProperties
     {
         PlatformName = platformName;
         PlatformUsername = platformUsername;
-        Metadata = metadata?.ToDictionary() ?? new ();
+        Metadata = metadata?.ToDictionary() ?? new();
     }
 
     /// <summary>

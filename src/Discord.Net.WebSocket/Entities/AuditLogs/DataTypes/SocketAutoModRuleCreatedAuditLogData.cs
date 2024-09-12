@@ -20,7 +20,7 @@ public class SocketAutoModRuleCreatedAuditLogData : ISocketAuditLogData
 
         var (_, data) = AuditLogHelper.CreateAuditLogEntityInfo<AutoModRuleInfoAuditLogModel>(changes, discord);
 
-        return new SocketAutoModRuleCreatedAuditLogData(new (data));
+        return new SocketAutoModRuleCreatedAuditLogData(new(data));
     }
 
     /// <summary>

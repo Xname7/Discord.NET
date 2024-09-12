@@ -160,8 +160,8 @@ namespace Discord.Rest
                 : CDN.GetDefaultUserAvatarUrl(Id);
 
         public virtual string GetDisplayAvatarUrl(ImageFormat format = ImageFormat.Auto, ushort size = 128)
-            => GetAvatarUrl(format, size) ?? GetDefaultAvatarUrl(); 
-            
+            => GetAvatarUrl(format, size) ?? GetDefaultAvatarUrl();
+
         /// <inheritdoc />
         public string GetAvatarDecorationUrl()
             => AvatarDecorationHash is not null

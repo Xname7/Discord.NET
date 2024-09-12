@@ -15,7 +15,7 @@ public class VoiceChannelStatusDeletedAuditLogData : IAuditLogData
 
     internal static VoiceChannelStatusDeletedAuditLogData Create(BaseDiscordClient discord, EntryModel entry, Model log = null)
     {
-        return new (entry.TargetId!.Value);
+        return new(entry.TargetId!.Value);
     }
 
     /// <summary>

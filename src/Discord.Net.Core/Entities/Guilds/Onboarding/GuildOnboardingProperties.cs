@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Discord;
 
 /// <summary>
@@ -25,5 +23,5 @@ public class GuildOnboardingProperties
     /// <summary>
     ///     Gets or sets current mode of onboarding.
     /// </summary>
-    public Optional<GuildOnboardingMode> Mode { get; set;}
+    public Optional<GuildOnboardingMode> Mode { get; set; }
 }

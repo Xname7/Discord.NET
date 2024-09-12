@@ -61,7 +61,7 @@ public class DiscordWebhookClient : IDisposable
         ApiClient.LoginAsync(TokenType.Webhook, webhookToken).GetAwaiter().GetResult();
         Webhook = WebhookClientHelper.GetWebhookAsync(this, webhookId).GetAwaiter().GetResult();
     }
-    
+
     /// <summary>
     ///     Creates a new Webhook Discord client.
     /// </summary>
@@ -105,7 +105,7 @@ public class DiscordWebhookClient : IDisposable
     }
     private static API.DiscordRestApiClient CreateApiClient(DiscordRestConfig config)
         => new API.DiscordRestApiClient(config.RestClientProvider, DiscordRestConfig.UserAgent, useSystemClock: config.UseSystemClock, defaultRatelimitCallback: config.DefaultRatelimitCallback);
-        
+
     /// <summary>
     ///     Sends a message to the channel for this webhook.
     /// </summary>
@@ -160,7 +160,7 @@ public class DiscordWebhookClient : IDisposable
         string threadName = null, ulong[] appliedTags = null, PollProperties poll = null)
         => WebhookClientHelper.SendFileAsync(this, filePath, text, isTTS, embeds, username, avatarUrl,
             allowedMentions, options, isSpoiler, components, flags, threadId, threadName, appliedTags, poll);
-            
+
     /// <summary> 
     ///     Sends a message to the channel for this webhook with an attachment. 
     /// </summary>
@@ -224,7 +224,7 @@ public class DiscordWebhookClient : IDisposable
 
         // thrown when groups are not populated/valid, or when there is no match
         ArgumentException ex(string reason = null)
-            => new ($"The given webhook Url was not in a valid format. {reason}", nameof(webhookUrl));
+            => new($"The given webhook Url was not in a valid format. {reason}", nameof(webhookUrl));
 
         var match = WebhookUrlRegex.Match(webhookUrl);
 

@@ -21,7 +21,7 @@ public class AutoModRuleCreatedAuditLogData : IAuditLogData
 
         var (_, data) = AuditLogHelper.CreateAuditLogEntityInfo<AutoModRuleInfoAuditLogModel>(changes, discord);
 
-        return new AutoModRuleCreatedAuditLogData(new (data));
+        return new AutoModRuleCreatedAuditLogData(new(data));
     }
 
     /// <summary>

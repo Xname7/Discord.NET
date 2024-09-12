@@ -90,7 +90,7 @@ namespace Discord.Interactions
                 Options = commandInfo.FlattenedParameters?.Select(x => x.ToApplicationCommandOptionProps())
                     ?.ToList(),
                 NameLocalizations = localizationManager?.GetAllNames(commandPath, LocalizationTarget.Command) ?? ImmutableDictionary<string, string>.Empty,
-                DescriptionLocalizations = localizationManager?.GetAllDescriptions(commandPath, LocalizationTarget.Command) ?? ImmutableDictionary<string, string>.Empty, 
+                DescriptionLocalizations = localizationManager?.GetAllDescriptions(commandPath, LocalizationTarget.Command) ?? ImmutableDictionary<string, string>.Empty,
             };
         }
 

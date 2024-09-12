@@ -34,7 +34,7 @@ public class SocketScheduledEventDeleteAuditLogData : ISocketAuditLogData
 
         return new SocketScheduledEventDeleteAuditLogData(entry.TargetId!.Value, data);
     }
-    
+
     /// <summary>
     ///     Gets the snowflake id of the event.
     /// </summary>

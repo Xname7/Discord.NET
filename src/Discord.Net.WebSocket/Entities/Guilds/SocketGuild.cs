@@ -18,7 +18,6 @@ using ChannelModel = Discord.API.Channel;
 using EmojiUpdateModel = Discord.API.Gateway.GuildEmojiUpdateEvent;
 using EventModel = Discord.API.GuildScheduledEvent;
 using ExtendedModel = Discord.API.Gateway.ExtendedGuild;
-using GuildSyncModel = Discord.API.Gateway.GuildSyncEvent;
 using MemberModel = Discord.API.GuildMember;
 using Model = Discord.API.Guild;
 using PresenceModel = Discord.API.Presence;
@@ -1632,7 +1631,7 @@ namespace Discord.WebSocket
         /// <returns>
         ///     A task that represents the asynchronous creation operation. The task result contains the created sticker.
         /// </returns>
-        public async Task<SocketCustomSticker> CreateStickerAsync(string name,  Image image, IEnumerable<string> tags, string description = null,
+        public async Task<SocketCustomSticker> CreateStickerAsync(string name, Image image, IEnumerable<string> tags, string description = null,
             RequestOptions options = null)
         {
             var model = await GuildHelper.CreateStickerAsync(Discord, this, name, image, tags, description, options).ConfigureAwait(false);
@@ -1650,11 +1649,11 @@ namespace Discord.WebSocket
         /// <returns>
         ///     A task that represents the asynchronous creation operation. The task result contains the created sticker.
         /// </returns>
-        public async Task<SocketCustomSticker> CreateStickerAsync(string name,  string path, IEnumerable<string> tags, string description = null,
+        public async Task<SocketCustomSticker> CreateStickerAsync(string name, string path, IEnumerable<string> tags, string description = null,
             RequestOptions options = null)
         {
             using var fs = File.OpenRead(path);
-            return await CreateStickerAsync(name,  fs, Path.GetFileName(fs.Name), tags, description, options);
+            return await CreateStickerAsync(name, fs, Path.GetFileName(fs.Name), tags, description, options);
         }
         /// <summary>
         ///     Creates a new sticker in this guild

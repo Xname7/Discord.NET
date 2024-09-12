@@ -779,7 +779,7 @@ namespace Discord.Rest
                 Limit = limit,
                 After = args is null
                     ? null
-                    : new SearchParamsAfter 
+                    : new SearchParamsAfter
                     {
                         UserId = args.After.UserId,
                         GuildJoinedAt = args.After.GuildJoinedAt

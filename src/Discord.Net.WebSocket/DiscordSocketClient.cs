@@ -2066,23 +2066,23 @@ namespace Discord.WebSocket
                                     if (data.GuildId.IsSpecified)
                                     {
                                         var guild = State.GetGuild(data.GuildId.Value);
-                                        guildCacheable = new (guild, data.GuildId.Value, guild is not null, () => Rest.GetGuildAsync(data.GuildId.Value));
+                                        guildCacheable = new(guild, data.GuildId.Value, guild is not null, () => Rest.GetGuildAsync(data.GuildId.Value));
 
                                         if (guild is not null)
                                         {
                                             var user = guild.GetUser(data.UserId);
-                                            userCacheable = new (user, data.UserId, user is not null, async () => await Rest.GetGuildUserAsync(data.GuildId.Value, data.UserId));
+                                            userCacheable = new(user, data.UserId, user is not null, async () => await Rest.GetGuildUserAsync(data.GuildId.Value, data.UserId));
 
                                             var channel = guild.GetTextChannel(data.ChannelId);
                                             channelCacheable = new(channel, data.ChannelId, channel is not null, async () => (RestTextChannel)await Rest.GetChannelAsync(data.ChannelId));
 
                                             var message = channel?.GetCachedMessage(data.MessageId) as IUserMessage;
-                                            messageCacheable = new (message, data.MessageId, message is not null,
+                                            messageCacheable = new(message, data.MessageId, message is not null,
                                                 async () => (channel ?? (ITextChannel)await Rest.GetChannelAsync(data.ChannelId)).GetMessageAsync(data.MessageId) as IUserMessage);
                                         }
                                         else
                                         {
-                                            userCacheable = new (null, data.UserId, false, async () => await Rest.GetGuildUserAsync(data.GuildId.Value, data.UserId));
+                                            userCacheable = new(null, data.UserId, false, async () => await Rest.GetGuildUserAsync(data.GuildId.Value, data.UserId));
                                             channelCacheable = new(null, data.ChannelId, false, async () => (RestTextChannel)(await Rest.GetChannelAsync(data.ChannelId)));
                                             messageCacheable = new(null, data.MessageId, false,
                                                 async () => await ((ITextChannel)await Rest.GetChannelAsync(data.ChannelId)).GetMessageAsync(data.MessageId) as IUserMessage);

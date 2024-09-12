@@ -125,7 +125,7 @@ public class ButtonBuilder
     /// <param name="emote">The emote for this link button.</param>
     /// <returns>A builder with the newly created button.</returns>
     public static ButtonBuilder CreateLinkButton(string label, string url, IEmote emote = null)
-        => new (label, null, ButtonStyle.Link, url, emote: emote);
+        => new(label, null, ButtonStyle.Link, url, emote: emote);
 
     /// <summary>
     ///     Creates a button with the <see cref="ButtonStyle.Danger"/> style.
@@ -135,7 +135,7 @@ public class ButtonBuilder
     /// <param name="emote">The emote for this danger button.</param>
     /// <returns>A builder with the newly created button.</returns>
     public static ButtonBuilder CreateDangerButton(string label, string customId, IEmote emote = null)
-        => new (label, customId, ButtonStyle.Danger, emote: emote);
+        => new(label, customId, ButtonStyle.Danger, emote: emote);
 
     /// <summary>
     ///     Creates a button with the <see cref="ButtonStyle.Primary"/> style.
@@ -145,7 +145,7 @@ public class ButtonBuilder
     /// <param name="emote">The emote for this primary button.</param>
     /// <returns>A builder with the newly created button.</returns>
     public static ButtonBuilder CreatePrimaryButton(string label, string customId, IEmote emote = null)
-        => new (label, customId, emote: emote);
+        => new(label, customId, emote: emote);
 
     /// <summary>
     ///     Creates a button with the <see cref="ButtonStyle.Secondary"/> style.
@@ -155,7 +155,7 @@ public class ButtonBuilder
     /// <param name="emote">The emote for this secondary button.</param>
     /// <returns>A builder with the newly created button.</returns>
     public static ButtonBuilder CreateSecondaryButton(string label, string customId, IEmote emote = null)
-        => new (label, customId, ButtonStyle.Secondary, emote: emote);
+        => new(label, customId, ButtonStyle.Secondary, emote: emote);
 
     /// <summary>
     ///     Creates a button with the <see cref="ButtonStyle.Success"/> style.
@@ -165,7 +165,7 @@ public class ButtonBuilder
     /// <param name="emote">The emote for this success button.</param>
     /// <returns>A builder with the newly created button.</returns>
     public static ButtonBuilder CreateSuccessButton(string label, string customId, IEmote emote = null)
-        => new (label, customId, ButtonStyle.Success, emote: emote);
+        => new(label, customId, ButtonStyle.Success, emote: emote);
 
     /// <summary>
     ///     Creates a button with the <see cref="ButtonStyle.Premium"/> style.
@@ -175,7 +175,7 @@ public class ButtonBuilder
     /// <param name="emote">The emote for this premium button.</param>
     /// <returns>A builder with the newly created button.</returns>
     public static ButtonBuilder CreatePremiumButton(string label, ulong skuId, IEmote emote = null)
-        => new (label, style: ButtonStyle.Success, emote: emote, skuId: skuId);
+        => new(label, style: ButtonStyle.Success, emote: emote, skuId: skuId);
 
     /// <summary>
     ///     Sets the current buttons label to the specified text.
@@ -281,39 +281,39 @@ public class ButtonBuilder
         switch (Style)
         {
             case 0:
-            {
-                throw new ArgumentException("A button must have a style.", nameof(Style));
-            }
+                {
+                    throw new ArgumentException("A button must have a style.", nameof(Style));
+                }
 
             case ButtonStyle.Primary:
             case ButtonStyle.Secondary:
             case ButtonStyle.Success:
             case ButtonStyle.Danger:
-            {
-                if (string.IsNullOrWhiteSpace(Label) && Emote is null)
-                    throw new InvalidOperationException("A button must have an Emote or a label!");
-                if (string.IsNullOrWhiteSpace(CustomId))
-                    throw new InvalidOperationException("Non-link and non-premium buttons must have a custom id associated with them");
+                {
+                    if (string.IsNullOrWhiteSpace(Label) && Emote is null)
+                        throw new InvalidOperationException("A button must have an Emote or a label!");
+                    if (string.IsNullOrWhiteSpace(CustomId))
+                        throw new InvalidOperationException("Non-link and non-premium buttons must have a custom id associated with them");
 
-            }
-            break;
+                }
+                break;
 
             case ButtonStyle.Link:
-            {
-                if (string.IsNullOrWhiteSpace(Label) && Emote is null)
-                    throw new InvalidOperationException("A button must have an Emote or a label!");
-                if (string.IsNullOrWhiteSpace(Url))
-                    throw new InvalidOperationException("Link buttons must have a link associated with them");
-                UrlValidation.ValidateButton(Url);
-            }
-            break;
+                {
+                    if (string.IsNullOrWhiteSpace(Label) && Emote is null)
+                        throw new InvalidOperationException("A button must have an Emote or a label!");
+                    if (string.IsNullOrWhiteSpace(Url))
+                        throw new InvalidOperationException("Link buttons must have a link associated with them");
+                    UrlValidation.ValidateButton(Url);
+                }
+                break;
 
             case ButtonStyle.Premium:
-            {
-                if (SkuId is null)
-                    throw new InvalidOperationException("Premium buttons must have a sku id associated with them");
-            }
-            break;
+                {
+                    if (SkuId is null)
+                        throw new InvalidOperationException("Premium buttons must have a sku id associated with them");
+                }
+                break;
         }
 
         return new ButtonComponent(Style, Label, Emote, CustomId, Url, IsDisabled, SkuId);

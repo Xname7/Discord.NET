@@ -25,14 +25,14 @@ public class AutoModRuleUpdatedAuditLogData : IAuditLogData
 
         var rule = RestAutoModRule.Create(discord, log.AutoModerationRules.FirstOrDefault(x => x.Id == entry.TargetId));
 
-        return new AutoModRuleUpdatedAuditLogData(new (before), new(after), rule);
+        return new AutoModRuleUpdatedAuditLogData(new(before), new(after), rule);
     }
 
     /// <summary>
     ///     Gets the auto moderation rule the changes correspond to.
     /// </summary>
     public IAutoModRule Rule { get; }
-    
+
     /// <summary>
     ///     Gets the auto moderation rule information before the changes.
     /// </summary>

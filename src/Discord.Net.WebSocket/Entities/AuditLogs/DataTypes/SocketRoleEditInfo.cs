@@ -18,7 +18,7 @@ public struct SocketRoleEditInfo
         Hoist = model.Hoist;
         Name = model.Name;
 
-        if(model.Permissions is not null)
+        if (model.Permissions is not null)
             Permissions = new GuildPermissions(model.Permissions.Value);
         else
             Permissions = null;

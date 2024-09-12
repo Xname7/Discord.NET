@@ -38,7 +38,7 @@ public class ThreadCreateAuditLogData : IAuditLogData
 
         return new ThreadCreateAuditLogData(threadChannel, entry.TargetId!.Value, data);
     }
-        
+
     /// <summary>
     ///     Gets the thread that was created if it still exists.
     /// </summary>

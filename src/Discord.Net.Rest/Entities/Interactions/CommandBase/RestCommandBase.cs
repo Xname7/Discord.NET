@@ -1,12 +1,9 @@
 using Discord.API.Rest;
-using Discord.Net.Rest;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using DataModel = Discord.API.ApplicationCommandInteractionData;
 using Model = Discord.API.Interaction;
 
 namespace Discord.Rest
@@ -297,15 +294,15 @@ namespace Discord.Rest
                 flags |= MessageFlags.Ephemeral;
 
             var args = new API.Rest.UploadWebhookFileParams(attachments.ToArray())
-                {
-                    Flags = flags,
-                    Content = text,
-                    IsTTS = isTTS,
-                    Embeds = embeds.Any() ? embeds.Select(x => x.ToModel()).ToArray() : Optional<API.Embed[]>.Unspecified,
-                    AllowedMentions = allowedMentions?.ToModel() ?? Optional<API.AllowedMentions>.Unspecified,
-                    MessageComponents = components?.Components.Select(x => new API.ActionRowComponent(x)).ToArray() ?? Optional<API.ActionRowComponent[]>.Unspecified,
-                    Poll = poll?.ToModel() ?? Optional<CreatePollParams>.Unspecified
-                };
+            {
+                Flags = flags,
+                Content = text,
+                IsTTS = isTTS,
+                Embeds = embeds.Any() ? embeds.Select(x => x.ToModel()).ToArray() : Optional<API.Embed[]>.Unspecified,
+                AllowedMentions = allowedMentions?.ToModel() ?? Optional<API.AllowedMentions>.Unspecified,
+                MessageComponents = components?.Components.Select(x => new API.ActionRowComponent(x)).ToArray() ?? Optional<API.ActionRowComponent[]>.Unspecified,
+                Poll = poll?.ToModel() ?? Optional<CreatePollParams>.Unspecified
+            };
             return InteractionHelper.SendFollowupAsync(Discord, args, Token, Channel, options);
         }
 

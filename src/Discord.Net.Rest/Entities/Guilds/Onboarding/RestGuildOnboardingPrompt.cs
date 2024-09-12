@@ -11,7 +11,7 @@ public class RestGuildOnboardingPrompt : RestEntity<ulong>, IGuildOnboardingProm
 {
     /// <inheritdoc />
     public DateTimeOffset CreatedAt => SnowflakeUtils.FromSnowflake(Id);
-    
+
     /// <inheritdoc cref="IGuildOnboardingPrompt.Options"/>
     public IReadOnlyCollection<RestGuildOnboardingPromptOption> Options { get; private set; }
 

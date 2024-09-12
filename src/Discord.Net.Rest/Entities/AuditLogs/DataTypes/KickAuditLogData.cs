@@ -31,7 +31,7 @@ public class KickAuditLogData : IAuditLogData
     ///     A user object representing the kicked user.
     /// </returns>
     public IUser Target { get; }
-    
+
     /// <summary>
     ///     Gets the type of integration which performed the action. <see langword="null"/> if the action was performed by a user.
     /// </summary>

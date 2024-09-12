@@ -84,7 +84,7 @@ namespace Discord.Interactions
         ///     A Task representing the operation of creating the interaction response.
         /// </returns>
         /// <exception cref="InvalidOperationException">Thrown if the interaction isn't a type of <see cref="RestInteraction"/>.</exception>
-        protected override Task RespondWithModalAsync<TModal>(string customId, RequestOptions options = null, Action<ModalBuilder> modifyModal = null) 
+        protected override Task RespondWithModalAsync<TModal>(string customId, RequestOptions options = null, Action<ModalBuilder> modifyModal = null)
             => HandleInteractionAsync(x => x.RespondWithModal<TModal>(customId, options, modifyModal));
 
         private Task HandleInteractionAsync(Func<RestInteraction, string> action)

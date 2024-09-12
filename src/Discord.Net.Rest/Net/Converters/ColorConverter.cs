@@ -1,13 +1,12 @@
 using Newtonsoft.Json;
-
-using System.Globalization;
 using System;
+using System.Globalization;
 
 namespace Discord.Net.Converters;
 
 internal class ColorConverter : JsonConverter
 {
-    public static readonly ColorConverter Instance = new ();
+    public static readonly ColorConverter Instance = new();
 
     public override bool CanConvert(Type objectType) => true;
     public override bool CanRead => true;

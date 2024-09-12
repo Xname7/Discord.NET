@@ -19,7 +19,7 @@ public enum AttachmentFlags
     ///     Indicates that this attachment is a thumbnail.
     /// </summary>
     IsThumbnail = 1 << 1,
-    
+
     /// <summary>
     ///     Indicates that this attachment has been edited using the remix feature on mobile.
     /// </summary>

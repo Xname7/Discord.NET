@@ -27,7 +27,7 @@ public class SocketWebhookCreateAuditLogData : ISocketAuditLogData
 
         return new SocketWebhookCreateAuditLogData(entry.TargetId!.Value, data);
     }
-    
+
     /// <summary>
     ///     Gets the webhook id.
     /// </summary>

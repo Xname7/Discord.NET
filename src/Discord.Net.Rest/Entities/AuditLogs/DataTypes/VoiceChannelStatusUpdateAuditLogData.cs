@@ -16,7 +16,7 @@ public class VoiceChannelStatusUpdateAuditLogData : IAuditLogData
 
     internal static VoiceChannelStatusUpdateAuditLogData Create(BaseDiscordClient discord, EntryModel entry, Model log = null)
     {
-        return new (entry.Options.Status, entry.TargetId!.Value);
+        return new(entry.Options.Status, entry.TargetId!.Value);
     }
 
     /// <summary>

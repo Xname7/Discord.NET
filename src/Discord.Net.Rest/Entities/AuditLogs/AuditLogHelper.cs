@@ -10,8 +10,8 @@ namespace Discord.Rest;
 
 internal static class AuditLogHelper
 {
-    private static readonly Dictionary<ActionType, Func<BaseDiscordClient, EntryModel, Model,  IAuditLogData>> CreateMapping
-        = new ()
+    private static readonly Dictionary<ActionType, Func<BaseDiscordClient, EntryModel, Model, IAuditLogData>> CreateMapping
+        = new()
         {
             [ActionType.GuildUpdated] = GuildUpdateAuditLogData.Create, // log
             [ActionType.ChannelCreated] = ChannelCreateAuditLogData.Create,
@@ -110,12 +110,12 @@ internal static class AuditLogHelper
         {
             if (property.GetCustomAttributes(typeof(JsonFieldAttribute), true).FirstOrDefault() is not JsonFieldAttribute jsonAttr)
                 continue;
-            
+
             var change = changes.FirstOrDefault(x => x.ChangedProperty == jsonAttr.FieldName);
 
             if (change is null)
                 continue;
-            
+
             property.SetValue(oldModel, change.OldValue?.ToObject(property.PropertyType, discord.ApiClient.Serializer));
             property.SetValue(newModel, change.NewValue?.ToObject(property.PropertyType, discord.ApiClient.Serializer));
         }

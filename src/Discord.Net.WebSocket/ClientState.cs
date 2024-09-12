@@ -193,7 +193,7 @@ namespace Discord.WebSocket
 
         internal SocketEntitlement RemoveEntitlement(ulong id)
         {
-            if(_entitlements.TryRemove(id, out var entitlement))
+            if (_entitlements.TryRemove(id, out var entitlement))
                 return entitlement;
             return null;
         }

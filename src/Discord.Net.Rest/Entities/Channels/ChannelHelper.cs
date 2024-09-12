@@ -311,7 +311,7 @@ namespace Discord.Rest
             if (flags is not MessageFlags.None and not MessageFlags.SuppressEmbeds and not MessageFlags.SuppressNotification)
                 throw new ArgumentException("The only valid MessageFlags are SuppressEmbeds, SuppressNotification and none.", nameof(flags));
 
-            
+
 
             var args = new CreateMessageParams
             {

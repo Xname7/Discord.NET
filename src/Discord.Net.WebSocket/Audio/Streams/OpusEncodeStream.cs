@@ -1,5 +1,4 @@
 using System;
-using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -45,7 +44,7 @@ namespace Discord.Audio.Streams
             for (int i = 0; i < frameCount; i += 1)
             {
                 await WriteAsync(frameBytes, 0, frameBytes.Length).ConfigureAwait(false);
-            } 
+            }
         }
 
         public override async Task WriteAsync(byte[] buffer, int offset, int count, CancellationToken cancelToken)

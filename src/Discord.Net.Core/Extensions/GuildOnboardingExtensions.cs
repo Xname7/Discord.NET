@@ -5,7 +5,7 @@ namespace Discord;
 public static class GuildOnboardingExtensions
 {
     public static GuildOnboardingProperties ToProperties(this IGuildOnboarding onboarding)
-        => new ()
+        => new()
         {
             ChannelIds = onboarding.DefaultChannelIds.ToArray(),
             IsEnabled = onboarding.IsEnabled,

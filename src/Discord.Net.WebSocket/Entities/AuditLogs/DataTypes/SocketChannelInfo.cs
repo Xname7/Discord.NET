@@ -26,7 +26,7 @@ public struct SocketChannelInfo
                 x.EmojiId.GetValueOrDefault(null),
                 x.EmojiName.GetValueOrDefault(null),
                 x.Moderated)).ToImmutableArray();
-        
+
         if (model.DefaultEmoji is not null)
         {
             if (model.DefaultEmoji.EmojiId.HasValue && model.DefaultEmoji.EmojiId.Value != 0)

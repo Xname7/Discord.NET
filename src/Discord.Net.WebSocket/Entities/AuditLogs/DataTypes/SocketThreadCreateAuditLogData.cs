@@ -32,7 +32,7 @@ public class SocketThreadCreateAuditLogData : ISocketAuditLogData
 
         return new SocketThreadCreateAuditLogData(entry.TargetId!.Value, data);
     }
-        
+
     /// <summary>
     ///     Gets the snowflake ID of the thread.
     /// </summary>

@@ -97,7 +97,7 @@ namespace Discord.WebSocket
 
         /// <inheritdoc />
         public DateTimeOffset? ExpiresAt { get; private set; }
-        
+
         /// <inheritdoc />
         public string Code => Id;
         /// <inheritdoc />
@@ -157,7 +157,7 @@ namespace Discord.WebSocket
 
         /// <inheritdoc />
         IApplication IInvite.Application => Application;
-        
+
         #endregion
     }
 }

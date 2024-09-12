@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -90,7 +89,7 @@ namespace Discord.Interactions.Builders
 #pragma warning restore CS0618 // Type or member is obsolete
 #pragma warning disable CS0618 // Type or member is obsolete
                     case EnabledInDmAttribute enabledInDm:
-                    {
+                        {
                             builder.IsEnabledInDm = enabledInDm.IsEnabled;
                         }
                         break;

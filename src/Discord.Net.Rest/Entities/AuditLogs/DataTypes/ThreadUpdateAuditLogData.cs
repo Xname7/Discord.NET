@@ -22,13 +22,13 @@ public class ThreadUpdateAuditLogData : IAuditLogData
     internal static ThreadUpdateAuditLogData Create(BaseDiscordClient discord, EntryModel entry, Model log)
     {
         var changes = entry.Changes;
-            
+
         var (before, after) = AuditLogHelper.CreateAuditLogEntityInfo<ThreadInfoAuditLogModel>(changes, discord);
 
         var threadInfo = log.Threads.FirstOrDefault(x => x.Id == entry.TargetId!.Value);
         var threadChannel = threadInfo == null ? null : RestThreadChannel.Create(discord, (IGuild)null, threadInfo);
 
-        return new ThreadUpdateAuditLogData(threadChannel, before.Type, new(before), new (after));
+        return new ThreadUpdateAuditLogData(threadChannel, before.Type, new(before), new(after));
     }
 
     // Doc Note: Corresponds to the *current* data

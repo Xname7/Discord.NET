@@ -17,7 +17,7 @@ public class SocketGuildInfo
             DefaultMessageNotifications = model.DefaultMessageNotifications,
             MfaLevel = model.MfaLevel,
             Description = model.Description,
-            PreferredLocale = model.PreferredLocale,   
+            PreferredLocale = model.PreferredLocale,
             IconHash = model.IconHash,
             OwnerId = model.OwnerId,
             AfkChannelId = model.AfkChannelId,

@@ -20,7 +20,7 @@ public class SocketStickerUpdatedAuditLogData : ISocketAuditLogData
         var changes = entry.Changes;
         var (before, after) = AuditLogHelper.CreateAuditLogEntityInfo<StickerInfoAuditLogModel>(changes, discord);
 
-        return new SocketStickerUpdatedAuditLogData(new(before), new (after));
+        return new SocketStickerUpdatedAuditLogData(new(before), new(after));
     }
 
     /// <summary>

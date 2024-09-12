@@ -17,7 +17,7 @@ public class SocketStageInstanceDeleteAuditLogData : ISocketAuditLogData
     ///     Gets the privacy level of the stage channel.
     /// </summary>
     public StagePrivacyLevel PrivacyLevel { get; }
-    
+
     /// <summary>
     ///     Gets the Id of the stage channel.
     /// </summary>

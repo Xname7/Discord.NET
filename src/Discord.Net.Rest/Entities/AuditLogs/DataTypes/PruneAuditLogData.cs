@@ -13,7 +13,7 @@ public class PruneAuditLogData : IAuditLogData
         PruneDays = pruneDays;
         MembersRemoved = membersRemoved;
     }
-            
+
     internal static PruneAuditLogData Create(BaseDiscordClient discord, EntryModel entry, Model log = null)
     {
         return new PruneAuditLogData(entry.Options.PruneDeleteMemberDays.Value, entry.Options.PruneMembersRemoved.Value);

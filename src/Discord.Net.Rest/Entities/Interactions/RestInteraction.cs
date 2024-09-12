@@ -94,7 +94,7 @@ namespace Discord.Rest
         public InteractionContextType? ContextType { get; private set; }
 
         /// <inheritdoc/>
-        public GuildPermissions Permissions  { get; private set; }
+        public GuildPermissions Permissions { get; private set; }
 
         /// <inheritdoc cref="IDiscordInteraction.Entitlements" />
         public IReadOnlyCollection<RestEntitlement> Entitlements { get; private set; }

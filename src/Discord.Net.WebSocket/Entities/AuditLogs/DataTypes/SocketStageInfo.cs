@@ -14,7 +14,7 @@ public class SocketStageInfo
     ///     Gets the privacy level of the stage channel.
     /// </summary>
     public StagePrivacyLevel? PrivacyLevel { get; }
-    
+
     internal SocketStageInfo(StagePrivacyLevel? level, string topic)
     {
         Topic = topic;

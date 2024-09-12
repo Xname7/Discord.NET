@@ -1,9 +1,8 @@
-using Discord.Rest;
 using Discord.API.AuditLogs;
+using Discord.Rest;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-
 using EntryModel = Discord.API.AuditLogEntry;
 
 namespace Discord.WebSocket;
@@ -17,7 +16,7 @@ public class SocketChannelCreateAuditLogData : ISocketAuditLogData
     {
         ChannelId = entry.TargetId!.Value;
         ChannelName = model.Name;
-        ChannelType = model.Type!.Value; 
+        ChannelType = model.Type!.Value;
         SlowModeInterval = model.RateLimitPerUser;
         IsNsfw = model.IsNsfw;
         Bitrate = model.Bitrate;

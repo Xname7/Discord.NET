@@ -1,7 +1,6 @@
 using Discord.Rest;
-
-using Model = Discord.API.AuditLogs.WebhookInfoAuditLogModel;
 using EntryModel = Discord.API.AuditLogEntry;
+using Model = Discord.API.AuditLogs.WebhookInfoAuditLogModel;
 
 namespace Discord.WebSocket;
 
@@ -25,7 +24,7 @@ public class SocketWebhookDeletedAuditLogData : ISocketAuditLogData
 
         var (data, _) = AuditLogHelper.CreateAuditLogEntityInfo<Model>(changes, discord);
 
-        return new SocketWebhookDeletedAuditLogData(entry.TargetId!.Value,data);
+        return new SocketWebhookDeletedAuditLogData(entry.TargetId!.Value, data);
     }
 
     /// <summary>

@@ -64,7 +64,7 @@ namespace Discord.Audio.Streams
         public override Task FlushAsync(CancellationToken cancelToken)
             => _next.FlushAsync(cancelToken);
 
-        public override  Task ClearAsync(CancellationToken cancelToken)
+        public override Task ClearAsync(CancellationToken cancelToken)
             => _next.ClearAsync(cancelToken);
 
         protected override void Dispose(bool disposing)

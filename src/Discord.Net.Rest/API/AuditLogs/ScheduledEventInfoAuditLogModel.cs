@@ -7,7 +7,7 @@ internal class ScheduledEventInfoAuditLogModel : IAuditLogInfoModel
 {
     [JsonField("channel_id")]
     public ulong? ChannelId { get; set; }
-    
+
     [JsonField("name")]
     public string Name { get; set; }
 
@@ -31,7 +31,7 @@ internal class ScheduledEventInfoAuditLogModel : IAuditLogInfoModel
 
     [JsonField("entity_id")]
     public ulong? EntityId { get; set; }
-    
+
     [JsonField("user_count")]
     public int? UserCount { get; set; }
 

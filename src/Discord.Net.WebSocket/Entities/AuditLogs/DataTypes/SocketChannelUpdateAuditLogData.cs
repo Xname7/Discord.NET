@@ -1,6 +1,5 @@
-using Discord.Rest;
 using Discord.API.AuditLogs;
-
+using Discord.Rest;
 using EntryModel = Discord.API.AuditLogEntry;
 
 namespace Discord.WebSocket

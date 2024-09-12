@@ -63,7 +63,7 @@ namespace Discord.WebSocket
         public override string GlobalName
         {
             get => GlobalUser.GlobalName;
-            internal set => GlobalUser.GlobalName = value; 
+            internal set => GlobalUser.GlobalName = value;
         }
         /// <inheritdoc/>
         public string DisplayAvatarId => GuildAvatarId ?? AvatarId;

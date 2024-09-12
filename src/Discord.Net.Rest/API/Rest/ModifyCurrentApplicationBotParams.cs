@@ -34,4 +34,4 @@ internal class ModifyCurrentApplicationBotParams
 
     [JsonProperty("integration_types_config")]
     public Optional<Dictionary<ApplicationIntegrationType, InstallParams>> IntegrationTypesConfig { get; set; }
-} 
+}

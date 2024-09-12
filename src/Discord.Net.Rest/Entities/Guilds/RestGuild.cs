@@ -197,7 +197,7 @@ namespace Discord.Rest
             if (model.IsBoostProgressBarEnabled.IsSpecified)
                 IsBoostProgressBarEnabled = model.IsBoostProgressBarEnabled.Value;
             if (model.InventorySettings.IsSpecified)
-                InventorySettings = model.InventorySettings.Value is null ? null : new (model.InventorySettings.Value.IsEmojiPackCollectible.GetValueOrDefault(false));
+                InventorySettings = model.InventorySettings.Value is null ? null : new(model.InventorySettings.Value.IsEmojiPackCollectible.GetValueOrDefault(false));
 
             if (model.Emojis != null)
             {
@@ -1154,11 +1154,11 @@ namespace Discord.Rest
         /// <returns>
         ///     A task that represents the asynchronous creation operation. The task result contains the created sticker.
         /// </returns>
-        public async Task<CustomSticker> CreateStickerAsync(string name,  string path, IEnumerable<string> tags, string description = null,
+        public async Task<CustomSticker> CreateStickerAsync(string name, string path, IEnumerable<string> tags, string description = null,
             RequestOptions options = null)
         {
             using var fs = File.OpenRead(path);
-            return await CreateStickerAsync(name, fs, Path.GetFileName(fs.Name), tags,  description,options);
+            return await CreateStickerAsync(name, fs, Path.GetFileName(fs.Name), tags, description, options);
         }
 
         /// <summary>
@@ -1173,7 +1173,7 @@ namespace Discord.Rest
         /// <returns>
         ///     A task that represents the asynchronous creation operation. The task result contains the created sticker.
         /// </returns>
-        public async Task<CustomSticker> CreateStickerAsync(string name,  Stream stream, string filename, IEnumerable<string> tags,
+        public async Task<CustomSticker> CreateStickerAsync(string name, Stream stream, string filename, IEnumerable<string> tags,
              string description = null, RequestOptions options = null)
         {
             var model = await GuildHelper.CreateStickerAsync(Discord, this, name, stream, filename, tags, description, options).ConfigureAwait(false);
@@ -1688,13 +1688,13 @@ namespace Discord.Rest
         async Task<IReadOnlyCollection<IApplicationCommand>> IGuild.GetApplicationCommandsAsync(bool withLocalizations, string locale, RequestOptions options)
             => await GetApplicationCommandsAsync(withLocalizations, locale, options).ConfigureAwait(false);
         /// <inheritdoc />
-        async Task<ICustomSticker> IGuild.CreateStickerAsync(string name,  Image image, IEnumerable<string> tags, string description, RequestOptions options)
+        async Task<ICustomSticker> IGuild.CreateStickerAsync(string name, Image image, IEnumerable<string> tags, string description, RequestOptions options)
             => await CreateStickerAsync(name, image, tags, description, options);
         /// <inheritdoc />
-        async Task<ICustomSticker> IGuild.CreateStickerAsync(string name,  Stream stream, string filename, IEnumerable<string> tags, string description, RequestOptions options)
+        async Task<ICustomSticker> IGuild.CreateStickerAsync(string name, Stream stream, string filename, IEnumerable<string> tags, string description, RequestOptions options)
             => await CreateStickerAsync(name, stream, filename, tags, description, options);
         /// <inheritdoc />
-        async Task<ICustomSticker> IGuild.CreateStickerAsync(string name,  string path, IEnumerable<string> tags, string description, RequestOptions options)
+        async Task<ICustomSticker> IGuild.CreateStickerAsync(string name, string path, IEnumerable<string> tags, string description, RequestOptions options)
             => await CreateStickerAsync(name, path, tags, description, options);
         /// <inheritdoc />
         async Task<ICustomSticker> IGuild.GetStickerAsync(ulong id, CacheMode mode, RequestOptions options)
@@ -1753,7 +1753,7 @@ namespace Discord.Rest
         /// <inheritdoc/>
         async Task<IAutoModRule> IGuild.CreateAutoModRuleAsync(Action<AutoModRuleProperties> props, RequestOptions options)
             => await CreateAutoModRuleAsync(props, options).ConfigureAwait(false);
-        
+
         /// <inheritdoc/>
         async Task<IGuildOnboarding> IGuild.GetOnboardingAsync(RequestOptions options)
             => await GetOnboardingAsync(options);

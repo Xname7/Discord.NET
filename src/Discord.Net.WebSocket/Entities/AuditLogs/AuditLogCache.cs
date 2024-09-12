@@ -44,7 +44,7 @@ internal class AuditLogCache
         => _entries.TryGetValue(id, out var result) ? result : null;
 
     /// <exception cref="ArgumentOutOfRangeException"><paramref name="limit"/> is less than 0.</exception>
-    public IReadOnlyCollection<SocketAuditLogEntry> GetMany(ulong? fromEntryId, Direction dir, int limit = DiscordConfig.MaxAuditLogEntriesPerBatch, ActionType ? action = null)
+    public IReadOnlyCollection<SocketAuditLogEntry> GetMany(ulong? fromEntryId, Direction dir, int limit = DiscordConfig.MaxAuditLogEntriesPerBatch, ActionType? action = null)
     {
         if (limit < 0)
             throw new ArgumentOutOfRangeException(nameof(limit));
@@ -66,7 +66,7 @@ internal class AuditLogCache
             var before = GetMany(fromEntryId, Direction.Before, around, action);
             var after = GetMany(fromEntryId, Direction.After, around, action).Reverse();
 
-            return after.Concat(new [] { entry }).Concat(before).ToImmutableArray();
+            return after.Concat(new[] { entry }).Concat(before).ToImmutableArray();
         }
 
         if (dir == Direction.Before)

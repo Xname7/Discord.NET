@@ -50,7 +50,7 @@ public class SocketCommandPermissionUpdateAuditLogData : ISocketAuditLogData
     ///     Gets the id of the application command which permissions were updated.
     /// </summary>
     public ulong CommandId { get; }
-    
+
     /// <summary>
     ///     Gets values of the permissions before the change if available.
     /// </summary>

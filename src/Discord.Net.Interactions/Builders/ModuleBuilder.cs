@@ -402,7 +402,7 @@ namespace Discord.Interactions.Builders
             _modalCommands.Add(command);
             return this;
         }
-        
+
         /// <summary>
         ///     Adds a modal command builder to <see cref="ModalCommands"/>.
         /// </summary>

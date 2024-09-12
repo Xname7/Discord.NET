@@ -121,7 +121,7 @@ namespace Discord
         ///     Allows the usage of custom emojis from other servers.
         /// </summary>
         UseExternalEmojis = 1L << 18,
-        
+
         /// <summary>
         ///     Allows for joining of a voice channel.
         /// </summary>
@@ -161,7 +161,7 @@ namespace Discord
         ///     Allows video streaming in a voice channel.
         /// </summary>
         Stream = 1L << 9,
-        
+
         // General 2
         /// <summary>
         ///     Allows for modification of own nickname.
@@ -277,7 +277,7 @@ namespace Discord
         ///     Allows members to interact with the Clyde AI bot.
         /// </summary>
         UseClydeAI = 1L << 47,
-        
+
         /// <summary>
         ///     Allows setting voice channel status.
         /// </summary>

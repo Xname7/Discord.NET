@@ -7,7 +7,7 @@ namespace Discord.Net.Converters;
 
 internal class SelectMenuDefaultValueTypeConverter : JsonConverter
 {
-    public static readonly SelectMenuDefaultValueTypeConverter Instance = new ();
+    public static readonly SelectMenuDefaultValueTypeConverter Instance = new();
 
     public override bool CanConvert(Type objectType) => true;
     public override bool CanRead => true;

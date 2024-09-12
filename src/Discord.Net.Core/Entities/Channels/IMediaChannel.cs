@@ -5,5 +5,5 @@ namespace Discord;
 /// </summary>
 public interface IMediaChannel : IForumChannel
 {
-    
+
 }

@@ -3,7 +3,6 @@ using Discord.Net.Rest;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 
 namespace Discord.API.Rest

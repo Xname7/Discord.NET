@@ -8,18 +8,18 @@ namespace Discord.WebSocket;
 internal static class SocketAuditLogHelper
 {
     private static readonly Dictionary<ActionType, Func<DiscordSocketClient, EntryModel, ISocketAuditLogData>> CreateMapping
-        = new ()
+        = new()
         {
             [ActionType.GuildUpdated] = SocketGuildUpdateAuditLogData.Create,
 
             [ActionType.ChannelCreated] = SocketChannelCreateAuditLogData.Create,
             [ActionType.ChannelUpdated] = SocketChannelUpdateAuditLogData.Create,
             [ActionType.ChannelDeleted] = SocketChannelDeleteAuditLogData.Create,
-            
+
             [ActionType.OverwriteCreated] = SocketOverwriteCreateAuditLogData.Create,
             [ActionType.OverwriteUpdated] = SocketOverwriteUpdateAuditLogData.Create,
             [ActionType.OverwriteDeleted] = SocketOverwriteDeleteAuditLogData.Create,
-            
+
             [ActionType.Kick] = SocketKickAuditLogData.Create,
             [ActionType.Prune] = SocketPruneAuditLogData.Create,
             [ActionType.Ban] = SocketBanAuditLogData.Create,
@@ -29,32 +29,32 @@ internal static class SocketAuditLogHelper
             [ActionType.MemberMoved] = SocketMemberMoveAuditLogData.Create,
             [ActionType.MemberDisconnected] = SocketMemberDisconnectAuditLogData.Create,
             [ActionType.BotAdded] = SocketBotAddAuditLogData.Create,
-            
+
             [ActionType.RoleCreated] = SocketRoleCreateAuditLogData.Create,
             [ActionType.RoleUpdated] = SocketRoleUpdateAuditLogData.Create,
             [ActionType.RoleDeleted] = SocketRoleDeleteAuditLogData.Create,
-            
+
             [ActionType.InviteCreated] = SocketInviteCreateAuditLogData.Create,
             [ActionType.InviteUpdated] = SocketInviteUpdateAuditLogData.Create,
             [ActionType.InviteDeleted] = SocketInviteDeleteAuditLogData.Create,
-            
+
             [ActionType.WebhookCreated] = SocketWebhookCreateAuditLogData.Create,
             [ActionType.WebhookUpdated] = SocketWebhookUpdateAuditLogData.Create,
             [ActionType.WebhookDeleted] = SocketWebhookDeletedAuditLogData.Create,
-            
+
             [ActionType.EmojiCreated] = SocketEmoteCreateAuditLogData.Create,
             [ActionType.EmojiUpdated] = SocketEmoteUpdateAuditLogData.Create,
             [ActionType.EmojiDeleted] = SocketEmoteDeleteAuditLogData.Create,
-            
+
             [ActionType.MessageDeleted] = SocketMessageDeleteAuditLogData.Create,
             [ActionType.MessageBulkDeleted] = SocketMessageBulkDeleteAuditLogData.Create,
             [ActionType.MessagePinned] = SocketMessagePinAuditLogData.Create,
             [ActionType.MessageUnpinned] = SocketMessageUnpinAuditLogData.Create,
-            
+
             [ActionType.EventCreate] = SocketScheduledEventCreateAuditLogData.Create,
             [ActionType.EventUpdate] = SocketScheduledEventUpdateAuditLogData.Create,
             [ActionType.EventDelete] = SocketScheduledEventDeleteAuditLogData.Create,
-            
+
             [ActionType.ThreadCreate] = SocketThreadCreateAuditLogData.Create,
             [ActionType.ThreadUpdate] = SocketThreadUpdateAuditLogData.Create,
             [ActionType.ThreadDelete] = SocketThreadDeleteAuditLogData.Create,
@@ -76,7 +76,7 @@ internal static class SocketAuditLogHelper
             [ActionType.AutoModerationRuleCreate] = SocketAutoModRuleCreatedAuditLogData.Create,
             [ActionType.AutoModerationRuleUpdate] = AutoModRuleUpdatedAuditLogData.Create,
             [ActionType.AutoModerationRuleDelete] = SocketAutoModRuleDeletedAuditLogData.Create,
-            
+
             [ActionType.AutoModerationBlockMessage] = SocketAutoModBlockedMessageAuditLogData.Create,
             [ActionType.AutoModerationFlagToChannel] = SocketAutoModFlaggedMessageAuditLogData.Create,
             [ActionType.AutoModerationUserCommunicationDisabled] = SocketAutoModTimeoutUserAuditLogData.Create,

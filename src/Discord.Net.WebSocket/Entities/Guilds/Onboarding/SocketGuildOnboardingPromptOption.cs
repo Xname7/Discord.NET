@@ -57,7 +57,7 @@ public class SocketGuildOnboardingPromptOption : SocketEntity<ulong>, IGuildOnbo
         {
             Emoji = null;
         }
-        
+
         Roles = model.RoleIds.Select(guild.GetRole).ToImmutableArray();
         Channels = model.ChannelIds.Select(guild.GetChannel).ToImmutableArray();
     }

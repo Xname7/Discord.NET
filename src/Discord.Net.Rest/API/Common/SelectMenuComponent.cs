@@ -50,7 +50,7 @@ namespace Discord.API
             MaxValues = component.MaxValues;
             Disabled = component.IsDisabled;
             ChannelTypes = component.ChannelTypes.ToArray();
-            DefaultValues = component.DefaultValues.Select(x => new SelectMenuDefaultValue {Id = x.Id, Type = x.Type}).ToArray();
+            DefaultValues = component.DefaultValues.Select(x => new SelectMenuDefaultValue { Id = x.Id, Type = x.Type }).ToArray();
         }
     }
 }

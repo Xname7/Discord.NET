@@ -1,8 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using DataModel = Discord.API.MessageComponentInteractionData;
-using InterationModel = Discord.API.Interaction;
 using Model = Discord.API.ModalInteractionData;
 
 namespace Discord.Rest

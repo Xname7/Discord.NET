@@ -6,7 +6,7 @@ namespace Discord;
 /// <summary>
 ///     Represents the metadata of a modal interaction.
 /// </summary>
-public readonly struct ModalSubmitInteractionMetadata :IMessageInteractionMetadata
+public readonly struct ModalSubmitInteractionMetadata : IMessageInteractionMetadata
 {
     /// <inheritdoc />
     public DateTimeOffset CreatedAt => SnowflakeUtils.FromSnowflake(Id);

@@ -1,7 +1,3 @@
-using Discord.API;
-
-using Newtonsoft.Json.Linq;
-
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -95,7 +91,7 @@ namespace Discord.Rest
 
         /// <inheritdoc />
         public PurchaseNotification PurchaseNotification { get; private set; }
-        
+
         /// <inheritdoc />
         public MessageCallData? CallData { get; private set; }
 
@@ -289,11 +285,11 @@ namespace Discord.Rest
                         ? new GuildProductPurchase(model.PurchaseNotification.Value.ProductPurchase.Value.ListingId, model.PurchaseNotification.Value.ProductPurchase.Value.ProductName)
                         : null);
             }
-            
+
             if (model.Call.IsSpecified)
                 CallData = new MessageCallData(model.Call.Value.Participants, model.Call.Value.EndedTimestamp.ToNullable());
         }
-        
+
         /// <inheritdoc />
         public async Task UpdateAsync(RequestOptions options = null)
         {

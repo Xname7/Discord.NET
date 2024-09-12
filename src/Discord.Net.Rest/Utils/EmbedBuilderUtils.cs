@@ -15,7 +15,7 @@ public static class EmbedBuilderUtils
         };
         return serializer;
     });
-    
+
     /// <summary>
     ///     Parses a string into an <see cref="EmbedBuilder"/>.
     /// </summary>

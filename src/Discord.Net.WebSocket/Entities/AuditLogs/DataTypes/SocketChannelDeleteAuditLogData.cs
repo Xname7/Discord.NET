@@ -2,9 +2,8 @@ using Discord.Rest;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-
-using Model = Discord.API.AuditLogs.ChannelInfoAuditLogModel;
 using EntryModel = Discord.API.AuditLogEntry;
+using Model = Discord.API.AuditLogs.ChannelInfoAuditLogModel;
 
 namespace Discord.WebSocket;
 

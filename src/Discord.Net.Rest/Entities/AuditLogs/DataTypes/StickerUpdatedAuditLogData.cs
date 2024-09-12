@@ -20,7 +20,7 @@ public class StickerUpdatedAuditLogData : IAuditLogData
         var changes = entry.Changes;
         var (before, after) = AuditLogHelper.CreateAuditLogEntityInfo<StickerInfoAuditLogModel>(changes, discord);
 
-        return new StickerUpdatedAuditLogData(new(before), new (after));
+        return new StickerUpdatedAuditLogData(new(before), new(after));
     }
 
     /// <summary>

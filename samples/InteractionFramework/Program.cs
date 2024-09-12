@@ -34,7 +34,7 @@ public class Program
             .AddEnvironmentVariables(prefix: "DC_")
             .AddJsonFile("appsettings.json", optional: true)
             .Build();
-        
+
         _services = new ServiceCollection()
             .AddSingleton(_configuration)
             .AddSingleton(_socketConfig)

@@ -5,5 +5,5 @@ namespace Discord.WebSocket;
 /// </summary>
 public interface ISocketAuditLogData : IAuditLogData
 {
-    
+
 }

@@ -23,7 +23,7 @@ namespace Discord.API
         public ApplicationCommand[] Commands { get; set; }
 
         [JsonProperty("auto_moderation_rules")]
-        public AutoModerationRule[] AutoModerationRules { get; set;}
+        public AutoModerationRule[] AutoModerationRules { get; set; }
 
         [JsonProperty("guild_scheduled_events")]
         public GuildScheduledEvent[] GuildScheduledEvents { get; set; }

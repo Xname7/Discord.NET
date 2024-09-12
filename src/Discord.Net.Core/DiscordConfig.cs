@@ -259,7 +259,7 @@ namespace Discord
         ///     Returns the maximum length of a voice channel status.
         /// </summary>
         public const int MaxVoiceChannelStatusLength = 500;
-      
+
         /// <summary>
         ///     Returns the maximum number of entitlements that can be gotten per-batch.
         /// </summary>
@@ -279,7 +279,7 @@ namespace Discord
         ///     Returns the maximum length of a poll question text.
         /// </summary>
         public const int MaxPollQuestionTextLength = 300;
-      
+
         /// <summary>
         ///     Returns the maximum number of bans that can be banned in a single bulk request.
         /// </summary>

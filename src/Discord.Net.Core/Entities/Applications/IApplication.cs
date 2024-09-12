@@ -83,7 +83,7 @@ namespace Discord
         /// <summary>
         ///     Gets the redirect uris configured for the application.
         /// </summary>
-        IReadOnlyCollection<string> RedirectUris { get;}
+        IReadOnlyCollection<string> RedirectUris { get; }
 
         /// <summary>
         ///      Gets application's interactions endpoint url. <see langword="null" /> if not set.

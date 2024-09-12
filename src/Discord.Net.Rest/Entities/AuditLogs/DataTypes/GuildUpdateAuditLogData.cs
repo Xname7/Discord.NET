@@ -19,7 +19,7 @@ namespace Discord.Rest
         internal static GuildUpdateAuditLogData Create(BaseDiscordClient discord, EntryModel entry, Model log = null)
         {
             var changes = entry.Changes;
-            
+
             var ownerIdModel = changes.FirstOrDefault(x => x.ChangedProperty == "owner_id");
 
             ulong? oldOwnerId = ownerIdModel?.OldValue?.ToObject<ulong>(discord.ApiClient.Serializer),

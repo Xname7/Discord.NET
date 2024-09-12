@@ -14,7 +14,7 @@ internal class ThreadInfoAuditLogModel : IAuditLogInfoModel
     public bool? IsArchived { get; set; }
 
     [JsonField("locked")]
-    public bool? IsLocked { get; set;}
+    public bool? IsLocked { get; set; }
 
     [JsonField("auto_archive_duration")]
     public ThreadArchiveDuration? ArchiveDuration { get; set; }

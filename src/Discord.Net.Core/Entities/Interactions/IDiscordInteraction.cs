@@ -104,7 +104,7 @@ namespace Discord
         /// <summary>
         ///     Gets the context this interaction was created in. <see langword="null"/> if context type is unknown.
         /// </summary>
-        InteractionContextType? ContextType { get;  }
+        InteractionContextType? ContextType { get; }
 
         /// <summary>
         ///     Gets the permissions the app or bot has within the channel the interaction was sent from.

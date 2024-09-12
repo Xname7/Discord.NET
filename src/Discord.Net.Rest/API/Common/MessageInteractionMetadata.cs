@@ -10,7 +10,7 @@ internal class MessageInteractionMetadata
 
     [JsonProperty("type")]
     public InteractionType Type { get; set; }
-    
+
     [JsonProperty("user")]
     public User User { get; set; }
 

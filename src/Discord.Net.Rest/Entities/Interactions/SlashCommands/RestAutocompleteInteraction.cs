@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using DataModel = Discord.API.AutocompleteInteractionData;
 using Model = Discord.API.Interaction;
@@ -121,6 +120,6 @@ namespace Discord.Rest
 
         /// <inheritdoc/>
         Task IAutocompleteInteraction.RespondAsync(IEnumerable<AutocompleteResult> result, RequestOptions options)
-            =>Task.FromResult(Respond(result, options));
+            => Task.FromResult(Respond(result, options));
     }
 }

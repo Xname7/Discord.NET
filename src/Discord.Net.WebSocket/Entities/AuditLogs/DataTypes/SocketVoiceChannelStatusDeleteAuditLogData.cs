@@ -1,5 +1,4 @@
 using EntryModel = Discord.API.AuditLogEntry;
-using Model = Discord.API.AuditLog;
 
 namespace Discord.WebSocket;
 
@@ -15,7 +14,7 @@ public class SocketVoiceChannelStatusDeleteAuditLogData : ISocketAuditLogData
 
     internal static SocketVoiceChannelStatusDeleteAuditLogData Create(DiscordSocketClient discord, EntryModel entry)
     {
-        return new (entry.TargetId!.Value);
+        return new(entry.TargetId!.Value);
     }
 
     /// <summary>
